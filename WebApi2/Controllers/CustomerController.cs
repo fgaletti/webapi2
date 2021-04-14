@@ -57,11 +57,11 @@ namespace WebApi2.Controllers
         }
 
 
-        //[HttpDelete]
-        //public async Task<IActionResult> Delete(int id)
-        //{
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
 
-        //    return Ok(await _ICustomerService.DeleteAsync(id));
-        //}
+            return Ok(await _ICustomerService.DeleteAsync(id));
+        }
     }
 }

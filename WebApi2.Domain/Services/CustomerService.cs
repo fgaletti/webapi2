@@ -42,14 +42,15 @@ namespace WebApi2.Domain.Services
         }
 
 
-        //public async Task<bool> DeleteAsync(int id)
-        // {
-        //     var customer = _iCustomerRepository.GetSingleOrDefaultAsync(c => c.id == id);
-        //     if (customer == null)
-        //         return false;
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var customer = await _iCustomerRepository.GetSingleOrDefaultAsync(c => c.id == id);
+            if (customer == null)
+                return false;
 
-        //     return await _iCustomerRepository.Remove(customer);
-        // }
+             _iCustomerRepository.Remove(customer);
+            return true;
+        }
 
 
 

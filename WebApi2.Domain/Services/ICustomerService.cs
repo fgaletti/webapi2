@@ -14,6 +14,6 @@ namespace WebApi2.Domain.Services
         Task<Customer> GetAsync(int id);
         Task<Customer> GetAsyncByName(string name);
 
-        //Task<bool> DeleteAsync(int id);
+        Task<bool> DeleteAsync(int id);
     }
 }
