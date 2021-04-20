@@ -24,7 +24,6 @@ namespace WebApi2.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            //getAllAsync()
             return Ok(await _ICustomerService.GetAllAsync());
         }
 
